@@ -1,10 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
----
 
 **Finding Lane Lines on the Road**
 
@@ -15,13 +10,15 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images/solidYelloCurve.jpg
+[image2]: ./test_images/solidYellowCurve_final.jpg
+
 
 ---
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Pipeline.
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I applied GaussianBlur to 
 smoothen the image using a kernel size of 5. Later to detect the edges used "Canny Edge Detection" algorithm, where the lower threshold and upper thresholds are set to 10 and 150 respectively.
@@ -37,16 +34,16 @@ plot line from x1=(y_max-b)/m, y1=y_max to x2=x_max, y2=m*x_max + b. And if it i
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
+![Initial image][image1] ![Final Image][image2]
 
 After applying for images, implemented the same pipeline for videos also.
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Shortcomings
 
 I could see that whenver there is a curve in the video, the lines kind of behave in a wierd way. Sometimes they become horizontal.
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Future improvements
 
 A possible improvement would be to change the way the co-ordinates are calculated for extrapolation. And also need to figure out how to enable the lane lines complete as shown in the example output video.
