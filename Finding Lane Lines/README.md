@@ -10,7 +10,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./test_images/solidYelloCurve.jpg
+[image1]: ./test_images/solidYellowCurve.jpg
 [image2]: ./test_images/solidYellowCurve_final.jpg
 
 
